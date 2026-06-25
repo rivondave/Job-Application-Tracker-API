@@ -1,0 +1,76 @@
+FOLDER STRUCTURE
+job-tracker-api/
+
+app/
+│
+├── api/
+│   ├── auth.py
+│   └── applications.py
+│
+├── core/
+│   ├── config.py
+│   ├── security.py
+│   └── database.py
+│
+├── models/
+│   ├── user.py
+│   └── application.py
+│
+├── schemas/
+│   ├── user.py
+│   └── application.py
+│
+├── services/
+│
+├── main.py
+│
+requirements.txt
+Dockerfile
+docker-compose.yml
+README.md
+
+DATABASE DESIGN
+Users Table 
+users
+
+id
+username
+email
+password_hash
+created_at
+
+Applications Table
+applications
+
+id
+company_name
+job_title
+status
+notes
+date_applied
+user_id
+created_at
+
+Relationship
+User
+  |
+  |----< Applications
+
+
+
+API Endpoints
+Auth
+POST /auth/register
+
+POST /auth/login
+
+Applications
+GET    /applications
+
+GET    /applications/{id}
+
+POST   /applications
+
+PUT    /applications/{id}
+
+DELETE /applications/{id}

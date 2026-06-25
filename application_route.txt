@@ -1,0 +1,17 @@
+Pagination
+GET /applications?skip=0&limit=5
+
+Search
+GET /applications?search=Google
+
+Status Filter
+GET /applications?status=Interview
+
+Sort Oldest First
+GET /applications?sort_by=date_applied&order=asc
+
+Sort By Company Name
+GET /applications?sort_by=company_name
+
+Combined Query
+GET /applications?status=Applied&search=Google&sort_by=date_applied&order=desc&skip=0&limit=10
