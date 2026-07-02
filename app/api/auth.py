@@ -79,11 +79,6 @@ def register_user(
             status_code=400,
             detail="Username already exists"
         )
-    
-    print("Before hash")
-    hashed = hash_password(user.password)
-    print("After hash")
-
 
     new_user = User(
         username=user.username,

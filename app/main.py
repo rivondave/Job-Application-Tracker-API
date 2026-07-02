@@ -14,7 +14,7 @@ from app.models.user import User
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="Job Tracker API",
+    title="Job Tracker API (rivondave)",
     version="1.0.0"
 )
 
